@@ -2,15 +2,19 @@
 
 name: Auto Linter Check
 on:
-  push:
-    paths: "*.py"
+  push:   # Workflow should be run when someone push or make changes in python file
+    paths: "*.py"  
 
-jobs:
+# Job - Code linting  ## 1. First clone the code 2. Install the linter 3. Run the linter
+jobs:    
   code-linting:
     runs-on: ubuntu-latest
     steps:
       - name: Clone/Checkout the code from the github
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4    # git hub action to clone the code
 
       - name: Install the linter
-        run: pip install ruff
+        run: pip install ruff     # Install the linter
+
+      - name: Check the code using linter
+        run: ruff check .               # check the syntax
