@@ -1,6 +1,6 @@
 # Workflow
 # Workflow should have a Name
-name: Hello
+name: Hello Workflow
 
 # On tells when the workflow sould run
 on:
