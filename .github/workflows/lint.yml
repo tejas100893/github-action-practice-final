@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Clone/Checkout the code from the github
-        uses: actions/checkout@v4    # git hub action to clone the code
+        uses: actions/checkout@v7   # git hub action to clone the code
 
       - name: Install the linter
         run: pip install ruff     # Install the linter
