@@ -1,0 +1,25 @@
+# Workflow
+# Workflow should have a Name
+name: Hello
+
+# On tells when the workflow sould run
+on:
+  workflow_dispatch:   # workflow_dispatch = When click on button
+  
+# Jobs
+# Jobs shoule be inside the Workflows
+jobs:
+  say-hello:  # Job Name
+    runs-on: ubuntu-latest  # Job should be run on ubuntu latest OS
+
+# Steps
+# Steps should be inside the Jobs
+    steps:
+      - name: Say hello to everyone   # Name of steps
+        run: echo "Hello Friends....."   # echo command to run
+  
+
+
+
+# Actions
+# Actions should be inside the Steps
