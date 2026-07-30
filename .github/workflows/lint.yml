@@ -1,0 +1,16 @@
+# Goal - Whenever someone change the paython code, then linter will check syntax, spelling and intentation
+
+name: Auto Linter Check
+on:
+  push:
+    paths: "*.py"
+
+jobs:
+  code-linting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone/Checkout the code from the github
+        uses: actions/checkout@v4
+
+      - name: Install the linter
+        run: pip install ruff
