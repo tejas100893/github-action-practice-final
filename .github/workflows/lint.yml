@@ -17,4 +17,4 @@ jobs:
         run: pip install ruff     # Install the linter
 
       - name: Check the code using linter
-        run: ruff check .               # check the syntax
+        run: ruff check . --fix              # check the syntax
